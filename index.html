@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星星评分</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="star.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<div class="star_lay">
+    <input type="radio" value="1" style="display:none">
+    <img id="item1_i1" src="staring.png" onclick="star1(1)" class="star_img">
+    <input type="radio" value="2" style="display:none">
+    <img id="item1_i2" src="staring.png" onclick="star1(2)" class="star_img">
+    <input type="radio" value="3" style="display:none">
+    <img id="item1_i3" src="staring.png" onclick="star1(3)" class="star_img">
+    <input type="radio" value="4" style="display:none">
+    <img id="item1_i4" src="staring.png" onclick="star1(4)" class="star_img">
+    <input type="radio" value="5" style="display:none">
+    <img id="item1_i5" src="staring.png" onclick="star1(5)" class="star_img">
+    <input type="hidden" name="item1" value="" id='item1'>
+</div>
+
+<div class="star_lay">
+    <input type="radio" value="1" style="display:none">
+    <img id="item2_i1" src="staring.png" onclick="star2(1)" class="star_img">
+    <input type="radio" value="2" style="display:none">
+    <img id="item2_i2" src="staring.png" onclick="star2(2)" class="star_img">
+    <input type="radio" value="3" style="display:none">
+    <img id="item2_i3" src="staring.png" onclick="star2(3)" class="star_img">
+    <input type="radio" value="4" style="display:none">
+    <img id="item2_i4" src="staring.png" onclick="star2(4)" class="star_img">
+    <input type="radio" value="5" style="display:none">
+    <img id="item2_i5" src="staring.png" onclick="star2(5)" class="star_img">
+    <input type="hidden" name="item2" value="" id='item2'>
+</div>
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+    function star1(n) {
+        for (var i = 1; i <= n; i++) {
+            var element = document.getElementById('item1_i' + i);
+            element.src = "stared.png";
+        }
+        $("#item1").val(n);
+
+        for (var s = n + 1; s <= 5; s++) {
+            var element = document.getElementById('item1_i' + s);
+            element.src = "staring.png";
+        }
+    }
+
+    function star2(n) {
+        for (var i = 1; i <= n; i++) {
+            var element = document.getElementById('item2_i' + i);
+            element.src = "stared.png";
+        }
+        $("#item2").val(n);
+
+        for (var s = n + 1; s <= 5; s++) {
+            var element = document.getElementById('item2_i' + s);
+            element.src = "staring.png";
+        }
+    }
+
+</script>
